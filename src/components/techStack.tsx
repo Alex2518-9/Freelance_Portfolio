@@ -1,3 +1,4 @@
+"use client";
 import { stack } from "@/lib/data";
 import Image from "next/image";
 

@@ -1,4 +1,4 @@
-import { Project } from "../types/project";
+import { Project } from "../types/models";
 import Image from "next/image";
 
 export default function ProjectCard({ p }: { p: Project }) {

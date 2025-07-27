@@ -1,4 +1,4 @@
-import { Project, Stack } from "../types/project";
+import { Project, Stack } from "../types/models";
 import html from "../../public/assets/html.png";
 import css from "../../public/assets/css.png";
 import javascript from "../../public/assets/javascript.png";

@@ -45,7 +45,7 @@ const SocialLinks = () => {
           Resume <ReadCvLogoIcon size={30} />
         </>
       ),
-      href: "../../public/assets/Alex_Téringer_CV.pdf",
+      href: "/Alex_Téringer_CV.pdf",
       style: "rounded-br-md",
       download: true,
     },
