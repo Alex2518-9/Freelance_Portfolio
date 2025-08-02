@@ -25,13 +25,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4 w-full">
             <a
               href="#projects"
-              className="rounded-md bg-indigo-600 px-5 py-3 text-white font-medium hover:bg-indigo-700 transition"
+              className="rounded-md flex items-center justify-center bg-indigo-600 px-5 py-3 text-white font-medium hover:bg-indigo-700 transition"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-md border border-gray-300 dark:border-gray-700 px-5 py-3 font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              className="rounded-md border flex items-center justify-center border-gray-300 dark:border-gray-700 px-5 py-3 font-medium hover:bg-gray-500 transition-all duration-300 ease-in-out"
             >
               Contact Me
             </a>

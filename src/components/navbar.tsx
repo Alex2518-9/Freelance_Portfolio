@@ -1,6 +1,8 @@
 "use client";
 
+import { useScrollStart } from "@/hooks/useScrollDetection";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 const items = [
   { href: "#projects", label: "Projects" },
@@ -10,18 +12,27 @@ const items = [
 ];
 
 export default function Navbar() {
+  const isScrolling = useScrollStart();
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-gray-900/70 border-b border-gray-200 dark:border-gray-800">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="font-bold text-lg">
+    <header
+      className={twMerge(
+        "sticky top-0 z-50 backdrop-blur bg-gray-800 text-white transition-all duration-300 ease-in-out",
+        isScrolling && " bg-gray-800/70"
+      )}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <Link href="/" className="font-bold text-xl">
           Téringer Alex<span className="text-indigo-500">.dev</span>
         </Link>
 
         <div className="flex items-center gap-6">
-          <ul className="hidden md:flex items-center gap-6 text-sm">
+          <ul className="hidden md:flex items-center gap-14 text-lg">
             {items.map((i) => (
               <li key={i.href}>
-                <a href={i.href} className="hover:text-indigo-500">
+                <a
+                  href={i.href}
+                  className="hover:text-indigo-500 transition-colors duration-300 ease-in-out"
+                >
                   {i.label}
                 </a>
               </li>
