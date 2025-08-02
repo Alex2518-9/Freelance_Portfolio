@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Providers from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Téringer Alex – Front‑End Developer",
@@ -25,11 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body
-        className={`${inter.className} bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100`}
-      >
-        <Providers>{children}</Providers>
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

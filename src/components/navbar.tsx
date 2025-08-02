@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import ThemeToggle from "./theme-toggle";
 
 const items = [
   { href: "#projects", label: "Projects" },
@@ -28,7 +27,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <ThemeToggle />
         </div>
       </nav>
     </header>

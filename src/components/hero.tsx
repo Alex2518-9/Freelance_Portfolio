@@ -1,12 +1,17 @@
 "use client";
 import Image from "next/image";
 import ProfilePicture from "../../public/assets/Profile_pict.jpg";
+import styles from "./hero.module.css";
+import { twMerge } from "tailwind-merge";
 
 export default function Hero() {
   return (
     <section className="mx-auto min-h-screen max-w-screen-xl px-4 py-16 md:py-24 text-center">
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">
-        Front‑End Developer & Freelancer
+      <h1
+        data-text="&nbsp;Front‑End Developer & Freelancer&nbsp;"
+        className={twMerge(styles.heroTitle, "font-extrabold tracking-tight")}
+      >
+        &nbsp;Front‑End Developer & Freelancer&nbsp;
       </h1>
       <div className="w-full  flex flex-col-reverse md:flex-row items-center md:items-stretch justify-center gap-8 md:gap-4 h-full mt-8 md:mt-16">
         <div className="flex px-4 flex-col items-center md:items-start justify-between max-w-full md:max-w-[50%]">
@@ -36,8 +41,6 @@ export default function Hero() {
           <Image
             src={ProfilePicture}
             alt="Téringer Alex"
-            height={500}
-            width={350}
             className="rounded-2xl mt-8 md:mt-0 w-full max-w-[300px] sm:max-w-[350px] h-auto object-cover shadow-lg"
             priority
           />
