@@ -1,3 +1,4 @@
+"use client";
 import { Project } from "../types/models";
 import Image from "next/image";
 
